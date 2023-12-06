@@ -5,7 +5,8 @@
 2) Creare lista (array) con elenco delle emailValid
 3) SE myEmail è contenuto in emailValid
 --- stampa 'puoi entrare'
-4)ALTRIMENTi 'non puoi entrare'
+4)ALTRIMENTi
+--- stampa 'puoi entrare'
 
 */
 
@@ -18,12 +19,10 @@ sendButton.addEventListener ('click', function() {
     const myEmail = document.querySelector('input').value;
     console.log('myEmail ', myEmail, typeof myEmail);
 
-    const correct = emailValid.includes(myEmail);
-
-    if (correct){
+    if (emailValid.includes(myEmail)){
         console.log('PUOI ENTRARE')
     }
-    
+
     else {
         console.log('NON PUOI ENTRARE')
     }
