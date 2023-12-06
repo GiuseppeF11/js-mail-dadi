@@ -10,3 +10,37 @@
 5)ALTRIMENTI
 --- stampa 'hai perso'
 */
+
+const myButton = document.getElementById('myButton');
+const cpuButton = document.getElementById('cpuButton');
+const playButton = document.getElementById('playButton');
+
+myButton.addEventListener ('click', function() {
+    const myNum = document.getElementById('myNum');
+    const myNumValue = myNum.innerHTML = Math.floor(Math.random() * 6) + 1;
+
+    cpuButton.addEventListener ('click', function() {
+        const cpuNum = document.getElementById('cpuNum');
+        cpuNumValue = cpuNum.innerHTML = Math.floor(Math.random() * 6) + 1;
+
+        playButton.addEventListener('click', function() {
+
+            let result = document.querySelector('h1');
+
+            if (myNumValue > cpuNumValue) {
+                result.innerHTML = 'HAI VINTO!';
+            }
+            
+            else if (myNumValue == cpuNumValue) {
+                result.innerHTML = 'PAREGGIO';
+            }
+            
+            else {
+                result.innerHTML = 'HAI PERSO...';
+            }
+        })
+    })
+})
+
+
+
