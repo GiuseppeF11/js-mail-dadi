@@ -6,6 +6,15 @@
 }
 
 /* GENERAL */
+body {
+    padding: 50px 0;
+    background-color: cornflowerblue;
+}
+
+button , input {
+    border-radius: 10px;
+    padding: 5px;
+}
 
 
 

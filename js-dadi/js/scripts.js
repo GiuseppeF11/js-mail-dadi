@@ -18,10 +18,11 @@ const playButton = document.getElementById('playButton');
 myButton.addEventListener ('click', function() {
     const myNum = document.getElementById('myNum');
     const myNumValue = myNum.innerHTML = Math.floor(Math.random() * 6) + 1;
+    
 
     cpuButton.addEventListener ('click', function() {
         const cpuNum = document.getElementById('cpuNum');
-        cpuNumValue = cpuNum.innerHTML = Math.floor(Math.random() * 6) + 1;
+        const cpuNumValue = cpuNum.innerHTML = Math.floor(Math.random() * 6) + 1;
 
         playButton.addEventListener('click', function() {
 
@@ -31,13 +32,14 @@ myButton.addEventListener ('click', function() {
                 result.innerHTML = 'HAI VINTO!';
             }
             
-            else if (myNumValue == cpuNumValue) {
+            else if (myNumValue < cpuNumValue){
+                result.innerHTML = 'HAI PERSO...';
+            }
+
+            else {
                 result.innerHTML = 'PAREGGIO';
             }
             
-            else {
-                result.innerHTML = 'HAI PERSO...';
-            }
         })
     })
 })
